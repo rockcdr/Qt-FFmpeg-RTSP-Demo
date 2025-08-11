@@ -12,6 +12,7 @@ extern "C"
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
 #include <libavfilter/avfilter.h>
+#include <libavutil/opt.h>
 #include <libswscale/swscale.h>
 }
 #include <QReadWriteLock>
@@ -38,6 +39,9 @@ private:
     QMutex mutex;
     QString rtspURL;
 
+    int64_t frame_cnt = 0;
 };
+
+bool get_current_steady_time_nano(int64_t* now);
 
 #endif /* FFMPEG_H_ */

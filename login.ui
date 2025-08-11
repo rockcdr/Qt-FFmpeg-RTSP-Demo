@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>rtsp://</string>
+    <string>rtsp://127.0.0.1/live/test</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
